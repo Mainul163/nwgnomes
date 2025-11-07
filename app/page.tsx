@@ -83,12 +83,11 @@ export default function HomePage() {
                             Landscaping • Gardening • Construction • Carpentry
                         </p>
                         <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                            Professional Outdoor & Indoor Property Services
+                            F
                         </h1>
                         <p className="text-slate-600 mb-6">
-                            amra full property solution dei — lawn theke woodwork porjonto.
-                            ek jaygay 4 dhoroner service paoar jonno ei website-ta use korte
-                            parba.
+                            simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the  standard dummy text ever since the 1500s.
                         </p>
                         <div className="flex gap-3 flex-wrap">
                             <a
@@ -164,15 +163,19 @@ export default function HomePage() {
                             About Our Company
                         </h2>
                         <p className="text-slate-600 mb-4">
-                            amra ekta multi-service property improvement team. landscaping,
-                            gardening, construction, ar carpentry — 4 dhoroner expert eki
-                            team-e kaj kore. tai client der ke alada alada vendor er jonno
-                            chinta korte hoy na.
+                            At NORTHWEST GNOMES, we’re your local go-to for all things maintenance, construction, and repairs.
+                            From keeping your property clean to building beautiful outdoor spaces, we take pride in work that lasts.
                         </p>
                         <p className="text-slate-600 mb-4">
-                            tumi ei template ta dhore nijer company info boshale fully
-                            professional dekhabe — “since 2020”, “licensed & insured”,
-                            “trained workers”, “on-time delivery” etc.
+                            We handle it all — landscaping, gutter cleaning, property washing,
+                            decks, fences, patios, concrete slabs, artificial lawns, and more.
+                            No job too big or small — just honest, reliable service done right the first time.
+                        </p>
+                        <p className="text-slate-600 mb-4">
+                            No job too big or small — just honest, reliable service done right the first time.
+                        </p>
+                        <p className="text-slate-600 mb-4">
+                            Your property, our passion.
                         </p>
                         <div className="grid grid-cols-2 gap-4 text-sm">
                             <div className="bg-slate-50 rounded-lg p-3 border">
@@ -268,7 +271,7 @@ export default function HomePage() {
                         Recent Works
                     </h2>
                     <p className="text-slate-500 text-sm mb-6">
-                        mixed project shots — landing page e dekhale client trust barhe
+                        mixed project shots — Professional Outdoor & Indoor Property Services
                     </p>
                     <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
                         {services.flatMap((s) => s.images).slice(0, 8).map((img, i) => (
@@ -294,7 +297,7 @@ export default function HomePage() {
                     <div>
                         <h2 className="text-2xl font-semibold mb-2">Need a service?</h2>
                         <p className="text-white/80 text-sm">
-                            phone/email form boshale ekdom ready hoye jabe.
+                            Professional Outdoor & Indoor Property Services.
                         </p>
                     </div>
                     <form className="bg-white rounded-xl p-4 flex flex-col md:flex-row gap-3 w-full md:w-auto md:min-w-[380px]">
