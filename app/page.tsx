@@ -83,7 +83,7 @@ export default function HomePage() {
                             Landscaping • Gardening • Construction • Carpentry
                         </p>
                         <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                            F
+                            Professional Outdoor & Indoor Property Services
                         </h1>
                         <p className="text-slate-600 mb-6">
                             simply dummy text of the printing and typesetting industry.
