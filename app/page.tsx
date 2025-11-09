@@ -52,11 +52,16 @@ export default function HomePage() {
             <header className="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
                 <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between gap-4">
                     <div className="flex items-center gap-2">
-            <span className="h-8 w-8 rounded-full bg-emerald-600 grid place-items-center text-white text-sm font-bold">
-              G
-            </span>
-                        <span className="text-lg font-semibold tracking-tight text-slate-900">
-              GreenBuild
+                        <Image
+                            src="/images/logo.jpeg"
+                            alt="NORTHWEST GNOMES logo"
+                            width={70}
+                            height={70}
+                            className="rounded-full"
+                            priority
+                        />
+                        <span className="text-lg font-semibold text-slate-900">
+              NORTHWEST GNOMES
             </span>
                     </div>
                     <nav className="hidden md:flex gap-5 text-sm text-slate-600">
@@ -68,7 +73,7 @@ export default function HomePage() {
                     </nav>
                     <a
                         href="#contact"
-                        className="hidden md:inline-flex bg-emerald-600 text-white rounded-lg px-4 py-2 text-sm font-medium hover:bg-emerald-700 transition"
+                        className="bg-amber-500 hover:bg-amber-600 text-slate-900 font-medium px-5 py-2.5 rounded-lg"
                     >
                         Get a Quote
                     </a>
@@ -92,7 +97,7 @@ export default function HomePage() {
                         <div className="flex gap-3 flex-wrap">
                             <a
                                 href="#contact"
-                                className="bg-emerald-600 text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-emerald-700 transition"
+                                className="bg-amber-500 hover:bg-amber-600 text-slate-900 px-5 py-2.5 rounded-lg text-sm font-medium shadow-sm"
                             >
                                 Book an Inspection
                             </a>
@@ -292,32 +297,77 @@ export default function HomePage() {
             </section>
 
             {/* Contact / CTA */}
-            <section id="contact" className="mx-auto max-w-6xl px-4 py-12">
-                <div className="bg-emerald-600 rounded-2xl p-8 md:p-10 text-white flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-                    <div>
-                        <h2 className="text-2xl font-semibold mb-2">Need a service?</h2>
-                        <p className="text-white/80 text-sm">
-                            Professional Outdoor & Indoor Property Services.
-                        </p>
-                    </div>
-                    <form className="bg-white rounded-xl p-4 flex flex-col md:flex-row gap-3 w-full md:w-auto md:min-w-[380px]">
-                        <input
-                            type="text"
-                            placeholder="Your name"
-                            className="flex-1 border border-slate-200 rounded-lg px-3 py-2 text-sm outline-none"
-                        />
-                        <input
-                            type="text"
-                            placeholder="Phone / Email"
-                            className="flex-1 border border-slate-200 rounded-lg px-3 py-2 text-sm outline-none"
-                        />
-                        <button
-                            type="submit"
-                            className="bg-emerald-600 text-white text-sm font-medium rounded-lg px-4 py-2 hover:bg-emerald-700 transition"
-                        >
-                            Send
-                        </button>
-                    </form>
+            <section id="contact" className="max-w-6xl mx-auto px-4 py-10">
+                <h2 className="text-2xl font-semibold text-slate-900 mb-4">Contact</h2>
+                <p className="text-slate-500 mb-6 text-sm">
+                    Reach us by phone anytime.
+                </p>
+
+                <div className="grid gap-4 sm:grid-cols-2">
+                    {/* Tel */}
+                    <a
+                        href="tel:+16047195248"
+                        className="flex items-center gap-4 rounded-xl border bg-white p-4 shadow-sm hover:shadow-md transition"
+                    >
+                        <div className="h-11 w-11 flex items-center justify-center rounded-full bg-emerald-100 text-emerald-700">
+                            {/* phone icon */}
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-5 w-5"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                strokeWidth={1.5}
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M2.25 6.75c0 8.284 6.716 15 15 15h1.5a2.25 2.25 0 0 0 2.25-2.25v-1.17a1.5 1.5 0 0 0-1.036-1.427l-3.104-1.035a1.5 1.5 0 0 0-1.554.36l-.723.723a.75.75 0 0 1-.853.146 12.035 12.035 0 0 1-4.63-4.63.75.75 0 0 1 .146-.853l.723-.723a1.5 1.5 0 0 0 .36-1.554L8.097 4.036A1.5 1.5 0 0 0 6.67 3H5.25A2.25 2.25 0 0 0 3 5.25v1.5Z"
+                                />
+                            </svg>
+                        </div>
+                        <div className="flex flex-col">
+        <span className="text-xs uppercase tracking-wide text-slate-400">
+          Tel
+        </span>
+                            <span className="text-base font-medium text-slate-900">
+          (604) 719-5248
+        </span>
+                        </div>
+                    </a>
+
+                    {/* Cell */}
+                    <a
+                        href="tel:+17786821470"
+                        className="flex items-center gap-4 rounded-xl border bg-white p-4 shadow-sm hover:shadow-md transition"
+                    >
+                        <div className="h-11 w-11 flex items-center justify-center rounded-full bg-emerald-100 text-emerald-700">
+                            {/* mobile icon */}
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-5 w-5"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                strokeWidth={1.5}
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M9 2.25h6A1.75 1.75 0 0 1 16.75 4v16A1.75 1.75 0 0 1 15 21.75H9A1.75 1.75 0 0 1 7.25 20V4A1.75 1.75 0 0 1 9 2.25Z"
+                                />
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M10 18.25h4" />
+                            </svg>
+                        </div>
+                        <div className="flex flex-col">
+        <span className="text-xs uppercase tracking-wide text-slate-400">
+          Cell
+        </span>
+                            <span className="text-base font-medium text-slate-900">
+          (778) 682-1470
+        </span>
+                        </div>
+                    </a>
                 </div>
             </section>
 
