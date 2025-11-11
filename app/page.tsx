@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 
 const services = [
     {
@@ -8,9 +9,21 @@ const services = [
         title: "Landscaping",
         description: "Modern, clean, and sustainable landscape design.",
         images: [
-            "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56",
-            "https://images.unsplash.com/photo-1541443131872-2b5be985d6aa",
-            "https://images.unsplash.com/photo-1551878019-7ef1a00f3e7b",
+            {
+                src: "/images/landscaping1.jpg",
+                alt: "Front yard with clean stone path and fresh green plants",
+                caption: "Front yard makeover",
+            },
+            {
+                src: "/images/landscaping2.jpg",
+                alt: "Backyard landscaping with grass and seating area",
+                caption: "Backyard landscaping",
+            },
+            {
+                src: "/images/landscaping3.jpg",
+                alt: "Modern landscape with decorative stones",
+                caption: "Decorative stone layout",
+            },
         ],
     },
     {
@@ -18,9 +31,21 @@ const services = [
         title: "Gardening",
         description: "Regular maintenance, planting, and seasonal care.",
         images: [
-            "https://images.unsplash.com/photo-1466690672306-5f92132f7248",
-            "https://images.unsplash.com/photo-1483794344563-d27a8d18014e",
-            "https://images.unsplash.com/photo-1501004318641-b39e6451bec6",
+            {
+                src: "/images/garden1.jpg",
+                alt: "Gardener trimming plants",
+                caption: "Plant trimming",
+            },
+            {
+                src: "/images/garden2.jpg",
+                alt: "Flower bed with colorful seasonal flowers",
+                caption: "Seasonal flowers",
+            },
+            {
+                src: "/images/garden3.jpg",
+                alt: "Watering and garden care tools",
+                caption: "Garden maintenance",
+            },
         ],
     },
     {
@@ -28,9 +53,21 @@ const services = [
         title: "Construction",
         description: "Small to mid-size renovation and structure build.",
         images: [
-            "https://images.unsplash.com/photo-1503387762-592deb58ef4e",
-            "https://images.unsplash.com/photo-1416331108676-a22ccb276e35",
-            "https://images.unsplash.com/photo-1498575207490-3e4ceae1edc4",
+            {
+                src: "/images/construction1.webp",
+                alt: "Workers on construction site with safety helmets",
+                caption: "On-site construction",
+            },
+            {
+                src: "/images/construction2.jpg",
+                alt: "Wood framing for residential house",
+                caption: "House framing",
+            },
+            {
+                src: "/images/construction3.jpg",
+                alt: "Contractor inspecting work",
+                caption: "Site inspection",
+            },
         ],
     },
     {
@@ -38,32 +75,48 @@ const services = [
         title: "Carpentry",
         description: "Custom wood works, cabinets, and interior finishes.",
         images: [
-            "https://images.unsplash.com/photo-1503386435953-66943ba996cd",
-            "https://images.unsplash.com/photo-1504148455328-c376907d081c",
-            "https://images.unsplash.com/photo-1506084868230-bb9d95c24759",
+            {
+                src: "/images/carpentry1.jpg",
+                alt: "Carpenter measuring wooden board",
+                caption: "Custom measurement",
+            },
+            {
+                src: "/images/carpentry2.jpg",
+                alt: "Workshop with tools and wood pieces",
+                caption: "Workshop setup",
+            },
+            {
+                src: "/images/carpentry3.jpg",
+                alt: "Installed wooden cabinet",
+                caption: "Cabinet finish",
+            },
         ],
     },
 ];
 
 export default function HomePage() {
+    const [open, setOpen] = useState(false);
     return (
         <main className="min-h-screen bg-slate-50" id="top">
             {/* Navbar */}
             <header className="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
                 <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between gap-4">
+                    {/* logo + name */}
                     <div className="flex items-center gap-2">
                         <Image
                             src="/images/logo.jpeg"
                             alt="NORTHWEST GNOMES logo"
-                            width={70}
-                            height={70}
+                            width={50}
+                            height={50}
                             className="rounded-full"
                             priority
                         />
-                        <span className="text-lg font-semibold text-slate-900">
-              NORTHWEST GNOMES
-            </span>
+                        <span className="text-base md:text-lg font-semibold text-slate-900">
+            NORTHWEST GNOMES
+          </span>
                     </div>
+
+                    {/* desktop nav */}
                     <nav className="hidden md:flex gap-5 text-sm text-slate-600">
                         <a href="#hero" className="hover:text-slate-900">Home</a>
                         <a href="#about" className="hover:text-slate-900">About</a>
@@ -71,13 +124,87 @@ export default function HomePage() {
                         <a href="#gallery" className="hover:text-slate-900">Gallery</a>
                         <a href="#contact" className="hover:text-slate-900">Contact</a>
                     </nav>
+
+                    {/* desktop CTA */}
                     <a
                         href="#contact"
-                        className="bg-amber-500 hover:bg-amber-600 text-slate-900 font-medium px-5 py-2.5 rounded-lg"
+                        className="hidden md:inline-flex bg-amber-500 hover:bg-amber-600 text-slate-900 font-medium px-4 py-2 rounded-lg text-sm"
                     >
                         Get a Quote
                     </a>
+
+                    {/* mobile menu button */}
+                    <button
+                        onClick={() => setOpen((p) => !p)}
+                        className="md:hidden inline-flex items-center justify-center rounded-md p-2 hover:bg-slate-100 text-slate-700"
+                        aria-label="Toggle navigation"
+                    >
+                        {/* simple icon */}
+                        <svg
+                            className="h-6 w-6"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            fill="none"
+                            strokeWidth="1.5"
+                        >
+                            {open ? (
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            ) : (
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+                            )}
+                        </svg>
+                    </button>
                 </div>
+
+                {/* mobile nav panel */}
+                {open && (
+                    <div className="md:hidden bg-white border-t">
+                        <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-2">
+                            <a
+                                href="#hero"
+                                onClick={() => setOpen(false)}
+                                className="py-2 text-slate-700 hover:text-slate-900"
+                            >
+                                Home
+                            </a>
+                            <a
+                                href="#about"
+                                onClick={() => setOpen(false)}
+                                className="py-2 text-slate-700 hover:text-slate-900"
+                            >
+                                About
+                            </a>
+                            <a
+                                href="#services"
+                                onClick={() => setOpen(false)}
+                                className="py-2 text-slate-700 hover:text-slate-900"
+                            >
+                                Services
+                            </a>
+                            <a
+                                href="#gallery"
+                                onClick={() => setOpen(false)}
+                                className="py-2 text-slate-700 hover:text-slate-900"
+                            >
+                                Gallery
+                            </a>
+                            <a
+                                href="#contact"
+                                onClick={() => setOpen(false)}
+                                className="py-2 text-slate-700 hover:text-slate-900"
+                            >
+                                Contact
+                            </a>
+                            <a
+                                href="#contact"
+                                onClick={() => setOpen(false)}
+                                className="mt-2 inline-flex items-center justify-center bg-amber-500 hover:bg-amber-600 text-slate-900 font-medium px-4 py-2 rounded-lg text-sm"
+                            >
+                                Get a Quote
+                            </a>
+                        </div>
+                    </div>
+                )}
             </header>
 
             {/* Hero */}
@@ -126,7 +253,7 @@ export default function HomePage() {
                     <div className="grid grid-cols-2 gap-4">
                         <div className="h-36 md:h-48 bg-emerald-200 rounded-2xl relative overflow-hidden">
                             <Image
-                                src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?auto=format&fit=crop&w=900&q=60"
+                                src="/images/landscaping2.jpg"
                                 alt="landscaping"
                                 fill
                                 className="object-cover"
@@ -134,15 +261,15 @@ export default function HomePage() {
                         </div>
                         <div className="h-36 md:h-64 bg-slate-200 rounded-2xl relative overflow-hidden">
                             <Image
-                                src="https://images.unsplash.com/photo-1483794344563-d27a8d18014e?auto=format&fit=crop&w=900&q=60"
-                                alt="gardening"
+                                src="/images/carpentry1.jpg"
+                                alt="carpentry"
                                 fill
                                 className="object-cover"
                             />
                         </div>
                         <div className="h-36 md:h-64 bg-slate-200 rounded-2xl relative overflow-hidden">
                             <Image
-                                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=60"
+                                src="/images/construction4.jpg"
                                 alt="construction"
                                 fill
                                 className="object-cover"
@@ -150,8 +277,8 @@ export default function HomePage() {
                         </div>
                         <div className="h-36 md:h-48 bg-emerald-200 rounded-2xl relative overflow-hidden">
                             <Image
-                                src="https://images.unsplash.com/photo-1503386435953-66943ba996cd?auto=format&fit=crop&w=900&q=60"
-                                alt="carpentry"
+                                src="/images/garden3.jpg"
+                                alt="gardening"
                                 fill
                                 className="object-cover"
                             />
@@ -199,7 +326,7 @@ export default function HomePage() {
                     </div>
                     <div className="relative h-64 md:h-72 rounded-2xl overflow-hidden bg-slate-200">
                         <Image
-                            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=60"
+                            src="/images/about.jpg"
                             alt="team working"
                             fill
                             className="object-cover"
@@ -209,19 +336,16 @@ export default function HomePage() {
             </section>
 
             {/* Services */}
+
             <section id="services" className="mx-auto max-w-6xl px-4 py-12 space-y-10">
                 <div className="flex items-center justify-between gap-4">
                     <div>
-                        <h2 className="text-2xl font-semibold text-slate-900">
-                            Our Services
-                        </h2>
+                        <h2 className="text-2xl font-semibold text-slate-900">Our Services</h2>
                         <p className="text-slate-500 text-sm">
-                            4 ta core category — protita e 3 ta kore sample image
+                            4 ta core category — protita e 3 ta kore project image
                         </p>
                     </div>
-                    <p className="text-xs text-slate-400">
-                        You can add more sections later
-                    </p>
+                    <p className="text-xs text-slate-400">You can add more sections later</p>
                 </div>
 
                 {services.map((service) => (
@@ -235,32 +359,31 @@ export default function HomePage() {
                             </div>
                             <a
                                 href="#contact"
-                                className="text-xs text-emerald-700 hover:text-emerald-900"
+                                className="text-xs text-amber-600 hover:text-amber-700"
                             >
                                 Get estimate →
                             </a>
                         </div>
+
                         <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-                            {service.images.map((img, idx) => (
+                            {service.images.map((image, idx) => (
                                 <div
                                     key={idx}
                                     className="bg-white rounded-xl overflow-hidden border shadow-sm hover:shadow-md transition"
                                 >
                                     <div className="relative h-44 w-full">
                                         <Image
-                                            src={img + "?auto=format&fit=crop&w=900&q=60"}
-                                            alt={`${service.title} ${idx + 1}`}
+                                            src={image.src}
+                                            alt={image.alt}
                                             fill
                                             className="object-cover"
                                         />
                                     </div>
                                     <div className="p-3">
                                         <h4 className="text-sm font-semibold text-slate-800">
-                                            {service.title} #{idx + 1}
+                                            {image.caption || `${service.title} #${idx + 1}`}
                                         </h4>
-                                        <p className="text-xs text-slate-500 mt-1">
-                                            sample preview — replace with real project.
-                                        </p>
+                                        <p className="text-xs text-slate-500 mt-1">{image.alt}</p>
                                     </div>
                                 </div>
                             ))}
@@ -278,20 +401,24 @@ export default function HomePage() {
                     <p className="text-slate-500 text-sm mb-6">
                         mixed project shots — Professional Outdoor & Indoor Property Services
                     </p>
+
                     <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
-                        {services.flatMap((s) => s.images).slice(0, 8).map((img, i) => (
-                            <div
-                                key={i}
-                                className="relative h-40 md:h-44 rounded-xl overflow-hidden bg-slate-200"
-                            >
-                                <Image
-                                    src={img + "?auto=format&fit=crop&w=900&q=60"}
-                                    alt={`gallery ${i + 1}`}
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
-                        ))}
+                        {services
+                            .flatMap((service) => service.images) // -> array of {src, alt, caption}
+                            .slice(0, 8)
+                            .map((image, i) => (
+                                <div
+                                    key={i}
+                                    className="relative h-40 md:h-44 rounded-xl overflow-hidden bg-slate-200"
+                                >
+                                    <Image
+                                        src={image.src}              // local/public image
+                                        alt={image.alt || `gallery ${i + 1}`}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
+                            ))}
                     </div>
                 </div>
             </section>
@@ -373,7 +500,7 @@ export default function HomePage() {
 
             {/* Footer */}
             <footer className="border-t py-6 text-center text-xs text-slate-400">
-                © {new Date().getFullYear()} GreenBuild Services. All rights reserved.
+                © {new Date().getFullYear()} NORTHWEST GNOMES Services. All rights reserved.
             </footer>
         </main>
     );
