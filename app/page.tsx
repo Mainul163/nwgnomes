@@ -7,7 +7,7 @@ const services = [
     {
         id: "landscaping",
         title: "Landscaping",
-        description: "Modern, clean, and sustainable landscape design.",
+        description: "Modern, clean, and sustainable landscape.",
         images: [
             {
                 src: "/images/landscaping1.jpg",
@@ -21,8 +21,8 @@ const services = [
             },
             {
                 src: "/images/landscaping3.jpg",
-                alt: "Modern landscape with decorative stones",
-                caption: "Decorative stone layout",
+                alt: "Site cleanup for landscape areas",
+                caption: "Site cleanup using compact equipment",
             },
         ],
     },
@@ -48,28 +48,7 @@ const services = [
             },
         ],
     },
-    {
-        id: "construction",
-        title: "Construction",
-        description: "Small to mid-size renovation and structure build.",
-        images: [
-            {
-                src: "/images/construction1.webp",
-                alt: "Workers on construction site with safety helmets",
-                caption: "On-site construction",
-            },
-            {
-                src: "/images/construction2.jpg",
-                alt: "Wood framing for residential house",
-                caption: "House framing",
-            },
-            {
-                src: "/images/construction3.jpg",
-                alt: "Contractor inspecting work",
-                caption: "Site inspection",
-            },
-        ],
-    },
+
     {
         id: "carpentry",
         title: "Carpentry",
@@ -212,14 +191,13 @@ export default function HomePage() {
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                     <div>
                         <p className="inline-block text-xs font-semibold tracking-wide uppercase bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full mb-4">
-                            Landscaping • Gardening • Construction • Carpentry
+                            Landscaping • Gardening  • Carpentry
                         </p>
                         <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
                             Professional Outdoor & Indoor Property Services
                         </h1>
                         <p className="text-slate-600 mb-6">
-                            simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the  standard dummy text ever since the 1500s.
+                            Expert landscaping, gardening, and carpentry delivered by a local team you can reach anytime.
                         </p>
                         <div className="flex gap-3 flex-wrap">
                             <a
@@ -269,8 +247,8 @@ export default function HomePage() {
                         </div>
                         <div className="h-36 md:h-64 bg-slate-200 rounded-2xl relative overflow-hidden">
                             <Image
-                                src="/images/construction4.jpg"
-                                alt="construction"
+                                src="/images/carpentry6.jpg"
+                                alt="carpentry"
                                 fill
                                 className="object-cover"
                             />
@@ -342,10 +320,9 @@ export default function HomePage() {
                     <div>
                         <h2 className="text-2xl font-semibold text-slate-900">Our Services</h2>
                         <p className="text-slate-500 text-sm">
-                            4 ta core category — protita e 3 ta kore project image
+                            We help homeowners and small businesses keep their outdoor spaces healthy, tidy, and good-looking all year round. Every project is handled by a trained team, on schedule, with clear communication.
                         </p>
                     </div>
-                    <p className="text-xs text-slate-400">You can add more sections later</p>
                 </div>
 
                 {services.map((service) => (
