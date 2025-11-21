@@ -11,17 +11,20 @@ const services = [
         images: [
             {
                 src: "/images/landscaping1.jpg",
-                alt: "Front yard with clean stone path and fresh green plants",
+                alt: "A curb-appeal refresh that reshapes beds, removes weeds, and tops up mulch/stone with low-maintenance planting. We patch tired lawn areas, lightly tune irrigation, " +
+                    "and haul away debris typically completed in 1–2 days, ideal when you need a quick upgrade before a season change or listing.",
                 caption: "Front yard makeover",
             },
             {
                 src: "/images/landscaping2.jpg",
-                alt: "Backyard landscaping with grass and seating area",
+                alt: "We level the lawn, add or reshape mulched beds, and plant a practical mix of shrubs/perennials with a simple access path (pavers or steppers)." +
+                    " Optional drip irrigation and low-voltage lighting create a family-friendly space usually 2–3 days, great for everyday outdoor living.",
                 caption: "Backyard landscaping",
             },
             {
                 src: "/images/landscaping3.jpg",
-                alt: "Site cleanup for landscape areas",
+                alt: "Targeted cleanup and light grading with compact machinery to clear brush, remove small roots/rocks, and re-level soil; we can also spread gravel, soil, or mulch as needed." +
+                    " Best for overgrown or pre-planting prep, typically ½–1½ days; excludes deep excavation or structural digging.",
                 caption: "Site cleanup using compact equipment",
             },
         ],
@@ -33,17 +36,20 @@ const services = [
         images: [
             {
                 src: "/images/garden1.jpg",
-                alt: "Gardener trimming plants",
+                alt: "Selective pruning to shape shrubs and small trees, remove deadwood, lift canopies away from paths and windows, and open the plant for light and airflow. We cut to the node (not shear blindly) to encourage healthy regrowth," +
+                    " finish with a tidy edge, and remove all green waste ideal for quarterly care or pre-season cleanups.",
                 caption: "Plant trimming",
             },
             {
                 src: "/images/garden2.jpg",
-                alt: "Flower bed with colorful seasonal flowers",
+                alt: "Bed refresh with color rotations tailored to the season—soil amended, beds edged, and irrigation tuned before installing a balanced mix of annuals and accent perennials. We plan a cohesive palette (sun/shade and deer-resistant options), " +
+                    "mulch to lock in moisture, and leave a simple care guide so the display stays vibrant for months.",
                 caption: "Seasonal flowers",
             },
             {
                 src: "/images/garden3.jpg",
-                alt: "Watering and garden care tools",
+                alt: "A recurring service that keeps beds and borders consistently neat: hand-weeding, edging, deadheading, light fertilization, pest/disease checks, and mulch top-ups as needed. Each visit includes debris haul " +
+                    "away and an irrigation glance; you’ll get brief visit notes or photos—perfect as a bi-weekly or monthly program to keep the garden looking “always ready.”",
                 caption: "Garden maintenance",
             },
         ],
@@ -56,17 +62,20 @@ const services = [
         images: [
             {
                 src: "/images/carpentry1.jpg",
-                alt: "Carpenter measuring wooden board",
+                alt: "Precise on-site measuring with laser and scribing to account for walls that are out of square, uneven floors, and existing trim. We produce a cut list and shop drawings with clearances for doors, appliances," +
+                    " and outlets, then confirm finishes and hardware before fabrication begins.",
                 caption: "Custom measurement",
             },
             {
                 src: "/images/carpentry2.jpg",
-                alt: "Workshop with tools and wood pieces",
+                alt: "Materials are milled to thickness, edges straightened and squared, and jigs/templates prepared for consistent repeatability. Tools are calibrated, parts are labeled, " +
+                    "and a dry-fit is done to verify joinery and tolerances before moving to finishing keeping install time fast and clean.",
                 caption: "Workshop setup",
             },
             {
                 src: "/images/carpentry3.jpg",
-                alt: "Installed wooden cabinet",
+                alt: "Surfaces are sanded through 120→180/220, edges broken, and a sealer/primer applied for a smooth base. We color-match stain or paint, spray multiple thin coats (waterborne lacquer or equivalent), " +
+                    "allow proper cure, and install hardware with precise alignment; care instructions are provided at hand-over.",
                 caption: "Cabinet finish",
             },
         ],
